@@ -5175,6 +5175,12 @@ self.C3_ExpressionFuncs = [
 		},
 		() => 4,
 		() => "interpola_Sol_y",
+		p => {
+			const n0 = p._GetNode(0);
+			const f1 = p._GetNode(1).GetBoundMethod();
+			const v2 = p._GetNode(2).GetVar();
+			return () => (n0.ExpObject() - f1(20, v2.GetValue()));
+		},
 		() => 2.5,
 		() => "interpola_Sol_x",
 		p => {
@@ -5185,7 +5191,8 @@ self.C3_ExpressionFuncs = [
 		() => "arcoIris_Y",
 		p => {
 			const n0 = p._GetNode(0);
-			return () => (n0.ExpObject() - 200);
+			const f1 = p._GetNode(1).GetBoundMethod();
+			return () => (n0.ExpObject() - f1(20, 100));
 		},
 		() => 3,
 		p => {
