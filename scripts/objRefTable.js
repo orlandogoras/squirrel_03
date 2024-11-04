@@ -41,8 +41,10 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.SetAnimFrame,
 		C3.Plugins.System.Exps.int,
 		C3.Plugins.System.Exps.random,
+		C3.Plugins.AJAX.Acts.Request,
 		C3.Plugins.Sprite.Cnds.IsVisible,
-		C3.Plugins.Browser.Acts.GoToURL,
+		C3.Plugins.Browser.Acts.GoToURLWindow,
+		C3.Plugins.System.Exps.tokenat,
 		C3.Plugins.System.Cnds.EveryTick,
 		C3.Plugins.Text.Acts.SetText,
 		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
@@ -55,7 +57,10 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Mouse.Cnds.OnObjectClicked,
 		C3.Plugins.Touch.Cnds.OnTapGestureObject,
 		C3.Plugins.System.Cnds.CompareBoolVar,
-		C3.Plugins.System.Cnds.Else
+		C3.Plugins.System.Cnds.Else,
+		C3.Plugins.AJAX.Cnds.OnComplete,
+		C3.Plugins.System.Acts.SetVar,
+		C3.Plugins.AJAX.Exps.LastData
 	];
 };
 self.C3_JsPropNameTable = [
@@ -106,7 +111,8 @@ self.C3_JsPropNameTable = [
 	{desplazamiento_y_sol: 0},
 	{distancia_barrera_squirrel: 0},
 	{sonido_fondo_activado: 0},
-	{cambiar_sonido: 0}
+	{cambiar_sonido: 0},
+	{enlaces: 0}
 ];
 
 self.InstanceType = {

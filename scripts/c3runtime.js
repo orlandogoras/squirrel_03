@@ -5150,10 +5150,15 @@ self.C3_ExpressionFuncs = [
 			const n2 = p._GetNode(2);
 			return () => f0(f1(n2.ExpObject()));
 		},
+		() => "enlaces",
+		() => "https://orlandogoras.github.io/squirrel_03/enlaces_melanie_01.txt",
 		p => {
-			const n0 = p._GetNode(0);
-			return () => n0.ExpInstVar();
+			const f0 = p._GetNode(0).GetBoundMethod();
+			const v1 = p._GetNode(1).GetVar();
+			const v2 = p._GetNode(2).GetVar();
+			return () => f0(v1.GetValue(), v2.GetValue(), ";;");
 		},
+		() => "NewWindow",
 		() => 1,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
@@ -5182,7 +5187,11 @@ self.C3_ExpressionFuncs = [
 			const n0 = p._GetNode(0);
 			return () => (n0.ExpObject() - 200);
 		},
-		() => 3
+		() => 3,
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0();
+		}
 ];
 
 
